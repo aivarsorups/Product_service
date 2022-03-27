@@ -1,8 +1,9 @@
-package main.java.Service.Validation;
-import main.java.Domain.Product;
+package App.Service.Validation;
+
+import App.Domain.Product;
 import java.math.BigDecimal;
 
-public class DiscountValidationRule implements ProductValidationRule {
+public class ProductDiscountValidationRule implements ProductValidationRule {
     private static BigDecimal MIN_DISCOUNT = new BigDecimal(0);
     private static BigDecimal MAX_DISCOUNT = new BigDecimal(100);
     private static BigDecimal PRODUCT_LOWEST_PRICE_FOR_DISCOUNT = new BigDecimal(20);
@@ -19,7 +20,7 @@ public class DiscountValidationRule implements ProductValidationRule {
         if (product.getDiscount().compareTo(MAX_DISCOUNT) > 0) {
             throw new ProductValidationException("Product discount cant be more than 100%");
         }
-        if (product.getPrice().compareTo(PRODUCT_LOWEST_PRICE_FOR_DISCOUNT) < 0) {
+        if (product.getPrice().compareTo(PRODUCT_LOWEST_PRICE_FOR_DISCOUNT) < 0 && product.getDiscount().compareTo(MIN_DISCOUNT) != 0 ) {
             throw new ProductValidationException("Product cant have discount if price is lower than 20$");
         }
     }

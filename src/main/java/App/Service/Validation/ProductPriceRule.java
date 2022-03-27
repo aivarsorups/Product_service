@@ -1,5 +1,6 @@
-package main.java.Service.Validation;
-import main.java.Domain.Product;
+package App.Service.Validation;
+
+import App.Domain.Product;
 import java.math.BigInteger;
 import java.math.BigDecimal;
 
@@ -10,7 +11,7 @@ public class ProductPriceRule implements ProductValidationRule {
         if(product.getPrice() == null) {
             throw new ProductValidationException("Price cant be null");
         }else if( product.getPrice().compareTo(MIN_PRICE)<=0) {
-            throw new ProductValidationException("Prive must be bigger than 0");
+            throw new ProductValidationException("Price must be bigger than 0");
         }
     }
 }

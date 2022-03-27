@@ -1,8 +1,8 @@
-package main.java.Repository;
-import main.java.Domain.Product;
+package App.Repository;
+
+import App.Domain.Product;
 import java.util.List;
 import java.util.Optional;
-
 
 public interface RepositoryInterface {
     Product save(Product product);

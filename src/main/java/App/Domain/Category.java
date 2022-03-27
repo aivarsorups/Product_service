@@ -1,4 +1,4 @@
-package main.java.Domain;
+package App.Domain;
 
 public enum Category {
     FRUITS, VEGETABLES;

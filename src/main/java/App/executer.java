@@ -1,10 +1,8 @@
-package main.java;
+package App;
 
-import main.java.Repository.ProductRepository;
-import main.java.Service.ProductService;
-import main.java.Service.Validation.*;
-import main.java.ShoppingListApp;
-
+import App.Repository.ProductRepository;
+import App.Service.ProductService;
+import App.Service.Validation.*;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -13,11 +11,11 @@ public class executer {
         ProductRepository repository=new ProductRepository();
         ProductNameValidationRule nameValidation=new ProductNameValidationRule();
         ProductPriceRule priceRule=new ProductPriceRule();
-        DiscountValidationRule discountValidationRule=new DiscountValidationRule();
+        ProductDiscountValidationRule productDiscountValidationRule =new ProductDiscountValidationRule();
         Set<ProductValidationRule> rules=new HashSet<>();
         rules.add(nameValidation);
         rules.add(priceRule);
-        rules.add(discountValidationRule);
+        rules.add(productDiscountValidationRule);
         ProductValidationService validationService=new ProductValidationService(rules);
         ProductService service=new ProductService(repository,validationService);
         ShoppingListApp shoppingListApplication=new ShoppingListApp(service);

@@ -1,6 +1,6 @@
-package main.java.Service.Validation;
-import main.java.Domain.Product;
+package App.Service.Validation;
 
+import App.Domain.Product;
 import java.util.Set;
 
 public class ProductValidationService {

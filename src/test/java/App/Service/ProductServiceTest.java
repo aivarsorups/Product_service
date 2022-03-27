@@ -3,8 +3,6 @@ package App.Service;
 import App.Domain.Product;
 import App.Repository.ProductRepository;
 import App.Service.Validation.ProductValidationService;
-import org.assertj.core.api.AssertionsForClassTypes;
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
@@ -12,18 +10,12 @@ import org.mockito.Captor;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
-
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.any;
-
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 

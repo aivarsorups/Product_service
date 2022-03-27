@@ -1,10 +1,10 @@
-package main.java;
-import main.java.Domain.Category;
-import main.java.Domain.Product;
-import main.java.Service.ProductService;
+package App;
+import App.Domain.Category;
+import App.Domain.Product;
+import App.Service.ProductService;
 import java.math.BigDecimal;
 import java.util.Scanner;
-import static main.java.Domain.Category.FRUITS;
+import static App.Domain.Category.FRUITS;
 
 public class ShoppingListApp {
     private static ProductService productService;
@@ -92,7 +92,7 @@ public class ShoppingListApp {
 
     }
 
-    public Product update(){
+    public void update(){
         Scanner scanner=new Scanner(System.in);
         Long id=findById();
         System.out.println("Enter category");
@@ -112,7 +112,7 @@ public class ShoppingListApp {
         product.setPrice(price);
         product.setDiscount(discount);
         product.setDescription(description);
-        return productService.updateProduct(product);
+        productService.updateProduct(product);
     }
     public void delete(){
         Scanner scanner=new Scanner(System.in);

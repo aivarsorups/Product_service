@@ -1,4 +1,4 @@
-package main.java.Domain;
+package App.Domain;
 
 import java.math.BigDecimal;
 import java.util.Objects;

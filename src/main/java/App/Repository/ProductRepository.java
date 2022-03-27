@@ -1,5 +1,6 @@
-package main.java.Repository;
-import main.java.Domain.Product;
+package App.Repository;
+
+import App.Domain.Product;
 import java.util.*;
 
 public class ProductRepository implements RepositoryInterface {

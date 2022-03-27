@@ -1,13 +1,10 @@
-package main.java.Service;
+package App.Service;
 
-import main.java.Domain.Product;
-import main.java.Repository.ProductRepository;
-import main.java.Repository.RepositoryInterface;
-import main.java.Service.Validation.ProductValidationService;
-
+import App.Domain.Product;
+import App.Repository.ProductRepository;
+import App.Service.Validation.ProductValidationService;
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.Optional;
 
 public class ProductService {
     private ProductRepository repository;

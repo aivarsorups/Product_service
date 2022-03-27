@@ -1,5 +1,6 @@
-package main.java.Service.Validation;
-import main.java.Domain.Product;
+package App.Service.Validation;
+
+import App.Domain.Product;
 
 public interface ProductValidationRule {
     void validate(Product product);
